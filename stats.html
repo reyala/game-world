@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html"><img src="assets/logo.png" alt="Главная"></a>
+        <span style="font-size: 26px; font-weight: bold; color: #4caf50;">Статистика</span>
+    </div>
+
+    <p>
+        <a href="index.html">Главная</a>
+        <a href="games.html">Игры</a>
+        <a href="genres.html">Жанры</a>
+        <a href="stats.html">Статистика</a>
+    </p>
+
+    <hr>
+
+    <h2>Мои оценки:</h2>
+    
+    <form id="ratingsForm">
+        <label for="gameTitle">Название игры:</label>
+        <input type="text" id="gameTitle">
+        
+        <label for="gameHours">Количество часов:</label>
+        <input type="number" id="gameHours" min="0">
+        
+        <label for="gameScore">Оценка (от 1 до 10):</label>
+        <input type="number" id="gameScore" min="1" max="10">
+        
+        <button type="button" onclick="addGameRating()">Добавить оценку</button>
+    </form>
+
+    <h3>Список добавленных записей:</h3>
+    <ul id="ratingsList"></ul>
+
+    <div style="background-color: #1a1a1a; padding: 10px; border-left: 3px solid #4caf50; margin-top: 15px;">
+        <p>Всего игр добавлено: <span id="totalCount">0</span></p>
+        <p>Сумма наигранных часов: <span id="totalHours">0</span></p>
+        <p>Средняя оценка: <span id="avgScore">0</span></p>
+    </div>
+
+
+    <hr>
+
+    <h2>Результаты студентов по экзаменам</h2>
+    <p>Добавьте студента и его баллы за три экзамена. Список и общая статистика обновятся автоматически.</p>
+
+    <form id="studentsForm">
+        <label for="studentName">Имя студента:</label>
+        <input type="text" id="studentName" placeholder="Например, Иван Иванов">
+
+        <label for="exam1">Баллы за экзамен 1 (от 0 до 100):</label>
+        <input type="number" id="exam1" min="0" max="100" step="1">
+
+        <label for="exam2">Баллы за экзамен 2 (от 0 до 100):</label>
+        <input type="number" id="exam2" min="0" max="100" step="1">
+
+        <label for="exam3">Баллы за экзамен 3 (от 0 до 100):</label>
+        <input type="number" id="exam3" min="0" max="100" step="1">
+
+        <button type="button" onclick="addStudent()">Добавить студента</button>
+    </form>
+
+    <h3>Список студентов</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Имя студента</th>
+                <th>Экзамен 1</th>
+                <th>Экзамен 2</th>
+                <th>Экзамен 3</th>
+                <th>Всего баллов</th>
+                <th>Средний балл</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody id="studentsTableBody"></tbody>
+    </table>
+
+    <div style="background-color: #1a1a1a; padding: 10px; border-left: 3px solid #4caf50; margin-top: 15px;">
+        <p>Всего добавлено студентов: <span id="studentCount">0</span></p>
+        <p>Сумма баллов за все экзамены: <span id="allExamPoints">0</span></p>
+        <p>Средний балл за экзамен 1: <span id="averageExam1">0</span></p>
+        <p>Средний балл за экзамен 2: <span id="averageExam2">0</span></p>
+        <p>Средний балл за экзамен 3: <span id="averageExam3">0</span></p>
+    </div>
+
+    <hr>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

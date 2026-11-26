@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная - Игровой Портал</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html"><img src="assets/logo.png" alt="Главная"></a>
+        <span style="font-size: 26px; font-weight: bold; color: #4caf50;">Игровой Портал</span>
+    </div>
+
+    <p>
+        <a href="index.html">Главная</a>
+        <a href="games.html">Игры</a>
+        <a href="genres.html">Жанры</a>
+        <a href="stats.html">Статистика</a>
+    </p>
+
+    <hr>
+
+    <h2>
+        <img src="assets/controller.gif" alt="Геймпад" width="40" style="vertical-align: middle; margin-right: 10px;">
+        Добро пожаловать
+    </h2>
+
+    <h3>Топ-3 игр</h3>
+    <ol>
+        <li><strong>Cyberpunk 2077</strong> — отличается качественной проработкой визуального стиля, глубокой атмосферой и интересным сюжетным повествованием в открытом мире.</li>
+        <li><strong>Baldur's Gate 3</strong> — выделяется высокой вариативностью игрового процесса, глубокой интерактивностью мира и свободой выбора.</li>
+        <li><strong>The Witcher 3: Wild Hunt</strong> — детально проработанный сюжет, проработанный игровой мир, выразительные персонажи и богатый лор.</li>
+    </ol>
+
+    <h3>Игровые платформы</h3>
+    <ul>
+        <li>Персональные компьютеры (PC)</li>
+        <li>Игровые консоли (PlayStation / Xbox)</li>
+        <li>Портативные системы (Nintendo Switch)</li>
+    </ul>
+
+    <hr>
+
+    <h3>Подбор игры по жанру</h3>
+    <form id="recommendForm">
+        <label for="genreSelect">Выберите жанр:</label>
+        <select id="genreSelect">
+            <option value="RPG">RPG</option>
+            <option value="Шутер">Шутер</option>
+            <option value="Стратегия">Стратегия</option>
+            <option value="Экшен">Экшен</option>
+            <option value="Выживание">Выживание</option>
+        </select>
+        <button type="button" onclick="getRandomGame()">Случайная игра</button>
+    </form>
+    <p id="recommendResult" style="font-weight: bold; color: #81c784; margin-top: 10px;"></p>
+
+    <hr>
+
+    <h3>Полезный совет</h3>
+    <p>Перед установкой игры проверь системные требования и свободное место на диске. А ещё не забывай делать перерывы во время долгих игровых сессий.</p>
+
+    <hr>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
